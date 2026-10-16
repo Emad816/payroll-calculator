@@ -18,8 +18,16 @@ public class PayrollApp {
         System.out.printf("Please enter your pay rate: ");
         userPayRate = scanner.nextDouble();
 
+        double overTime;
+        overTime = (userHours - 40) * (userPayRate * 1.5);
+
         double grossPay;
         grossPay = userHours * userPayRate;
+
+        if (userHours > 40) {
+            grossPay = 40 * userPayRate;
+            grossPay = grossPay + overTime;
+        }
 
         System.out.printf("\nEmployee %s Gross Pay %.2f ",userName ,grossPay);
 
