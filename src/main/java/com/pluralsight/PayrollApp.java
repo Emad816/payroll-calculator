@@ -16,7 +16,13 @@ public class PayrollApp {
 
         double userPayRate;
         System.out.printf("Please enter your pay rate: ");
-        userPayRate = scanner.nextDouble()
+        userPayRate = scanner.nextDouble();
+
+        double grossPay;
+        grossPay = userHours * userPayRate;
+
+        System.out.printf("\nEmployee %s Gross Pay %.2f ",userName ,grossPay);
 
     }
+
 }
